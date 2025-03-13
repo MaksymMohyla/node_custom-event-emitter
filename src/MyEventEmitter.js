@@ -84,6 +84,8 @@ class MyEventEmitter {
     }
 
     this.events[evType].unshift(callback);
+
+    return this;
   }
 
   prependOnceListener(evType, callback) {
@@ -118,6 +120,8 @@ class MyEventEmitter {
     }
 
     this.events[evType] = [];
+
+    return this;
   }
 
   listenerCount(evType) {
